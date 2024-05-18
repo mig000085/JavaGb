@@ -147,6 +147,7 @@ package les;
 /**
  * Program
  */
+
 /**
  * public class Program {
  * public static void main(String[] args) {
@@ -169,20 +170,19 @@ package les;
  * }
  */
 // Массивы Многомерные
-/**
- * public class Program {
- * public static void main(String[] args) {
- * int[] arr[] = new int[3][5];
- * for (int[] line : arr) {
- * for (int item : line) {
- * System.out.printf("%d ", item);
- * }
- * System.out.println();
- * }
- * }
- * }
- */
 
+/**public class Program {
+public static void main(String[] args) {
+int[] arr[] = new int[3][5];
+for (int[] line : arr) {
+for (int item : line) {
+System.out.printf("%d ", item);
+}
+System.out.println();
+}
+}
+}
+*/
 /**
  * public class Program {
  * public static void main(String[] args) {
@@ -279,15 +279,17 @@ package les;
  * }
  */
 
-/**public class Program {
-    public static void main(String[] args) {
-        int a = 1, b = 2;
-        int c = a + b;
-        String res = String.format("%d + %d = %d \n", a, b, c);
-        System.out.printf("%d + %d = %d \n", a, b, c);
-        System.out.println(res);
-    }
-}*/
+/**
+ * public class Program {
+ * public static void main(String[] args) {
+ * int a = 1, b = 2;
+ * int c = a + b;
+ * String res = String.format("%d + %d = %d \n", a, b, c);
+ * System.out.printf("%d + %d = %d \n", a, b, c);
+ * System.out.println(res);
+ * }
+ * }
+ */
 
 /**
  * Виды спецификаторов
@@ -341,21 +343,23 @@ package les;
 
 // Управляющие конструкции: условный оператор
 
-/**public class Program {
-    public static void main(String[] args) {
-        int a = 1;
-        int b = 2;
-        int c;
-        if (a > b) {
-            c = a;
-        } else {
-            c = b;
-        }
-        System.out.println(c);
-    }
-}*/
+/**
+ * public class Program {
+ * public static void main(String[] args) {
+ * int a = 1;
+ * int b = 2;
+ * int c;
+ * if (a > b) {
+ * c = a;
+ * } else {
+ * c = b;
+ * }
+ * System.out.println(c);
+ * }
+ * }
+ */
 
-//Оператор выбора
+// Оператор выбора
 
 /**
  * import java.util.Scanner;
@@ -403,19 +407,20 @@ package les;
 
 // Цикл while
 
-/**public class Program {
-
-    public static void main(String[] args) {
-        int value = 321;
-        int count = 0;
-        while (value != 0) {
-            value /= 10;
-            count++;
-        }
-        System.out.println(count);
-    }
-}
-*/
+/**
+ * public class Program {
+ * 
+ * public static void main(String[] args) {
+ * int value = 321;
+ * int count = 0;
+ * while (value != 0) {
+ * value /= 10;
+ * count++;
+ * }
+ * System.out.println(count);
+ * }
+ * }
+ */
 // Цикл do while
 /**
  * public class Program {
@@ -431,53 +436,59 @@ package les;
  * }
  */
 // Оператор цикла for
-/**public class Program {
-    public static void main(String[] args) {
-        int s = 0;
-        for (int i = 1; i <= 10; i++) {
-            s += i;
-        }
-        System.out.println(s);
-    }
-}*/
+/**
+ * public class Program {
+ * public static void main(String[] args) {
+ * int s = 0;
+ * for (int i = 1; i <= 10; i++) {
+ * s += i;
+ * }
+ * System.out.println(s);
+ * }
+ * }
+ */
 
 // Работа с файлами
 
-/**import java.io.FileWriter;
-import java.io.IOException;
+/**
+ * import java.io.FileWriter;
+ * import java.io.IOException;
+ * 
+ * public class Program {
+ * public static void main(String[] args) {
+ * try (FileWriter fw = new FileWriter("file.txt", false)) {
+ * fw.write("line 1");
+ * fw.append('\n');
+ * fw.append('2');
+ * fw.append('\n');
+ * fw.write("line 3");
+ * fw.flush();
+ * } catch (IOException ex) {
+ * System.out.println(ex.getMessage());
+ * }
+ * }
+ * }
+ */
 
-public class Program {
-    public static void main(String[] args) {
-        try (FileWriter fw = new FileWriter("file.txt", false)) {
-            fw.write("line 1");
-            fw.append('\n');
-            fw.append('2');
-            fw.append('\n');
-            fw.write("line 3");
-            fw.flush();
-        } catch (IOException ex) {
-            System.out.println(ex.getMessage());
-        }
-    }
-}*/
-
-/**import java.io.*;
-// Чтение Вариант посимвольно
-
-public class Program {
-    public static void main(String[] args) throws Exception {
-        FileReader fr = new FileReader("file.txt");
-        int c;
-        while ((c = fr.read()) != -1) {
-            char ch = (char) c;
-            if (ch == '\n') {
-                System.out.print(ch);
-            } else {
-                System.out.print(ch);
-            }
-        }
-    }
-}*/
+/**
+ * import java.io.*;
+ * // Чтение Вариант посимвольно
+ * 
+ * public class Program {
+ * public static void main(String[] args) throws Exception {
+ * FileReader fr = new FileReader("file.txt");
+ * int c;
+ * while ((c = fr.read()) != -1) {
+ * char ch = (char) c;
+ * if (ch == '\n') {
+ * System.out.print(ch);
+ * } else {
+ * System.out.print(ch);
+ * }
+ * }
+ * }
+ * }
+ */
 
 // Вариант построчно
 
